@@ -26,7 +26,7 @@ gulp.task('typescript', ['clean'], function() {
         .pipe(tslint())
         .pipe(tslint.report('prose'))
         .pipe(sourcemaps.init())
-        .pipe(ts(tsProject))
+        .pipe(tsProject())
         .pipe(babel())
         .pipe(sourcemaps.write())
         .pipe(gulp.dest('.'));
